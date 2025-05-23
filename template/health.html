@@ -1,0 +1,197 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Dashboard</title>
+    <link rel="stylesheet" href="{% static 'health.css' %}">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">Healthcare.</div>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search" disabled>
+            </div>
+            <div class="header-right">
+                <i class="fas fa-bell"></i>
+                <div class="user-profile">
+                    <img src="https://static.vecteezy.com/system/resources/previews/022/123/337/original/user-icon-profile-icon-account-icon-login-sign-line-vector.jpg" alt="User Avatar" class="avatar">
+                    <span>John Doe</span>
+                </div>
+                <button class="add-btn"><i class="fas fa-plus"></i></button>
+            </div>
+        </header>
+
+        <!-- Main Layout -->
+        <div class="main-layout">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h3>General</h3>
+                <nav>
+                    <ul>
+                        <li><i class="fas fa-home"></i> Dashboard</li>
+                        <li><i class="fas fa-history"></i> History</li>
+                        <li><i class="fas fa-calendar"></i> Calendar</li>
+                        <li><i class="fas fa-clipboard-list"></i> Appointments</li>
+                        <li><i class="fas fa-chart-bar"></i> Statistics</li>
+                        <li><i class="fas fa-vial"></i> Tests</li>
+                        <li><i class="fas fa-comment"></i> Chat</li>
+                        <li><i class="fas fa-life-ring"></i> Support</li>
+                        <li><i class="fas fa-cog"></i> Setting</li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="dashboard-main">
+                <!-- Anatomy Section -->
+                <section class="anatomy-section">
+                    <img src="https://th.bing.com/th/id/OIP.RFAHOMOzf3C0scFIef7ITQHaHa?w=2000&h=2000&rs=1&pid=ImgDetMain" alt="Anatomical Illustration" class="anatomy-img">
+                    <div class="health-indicators">
+                        <div class="indicator healthy">Healthy Heart</div>
+                        <div class="indicator issue">Lungs</div>
+                        <div class="indicator healthy">Teeth</div>
+                        <div class="indicator healthy">Bone</div>
+                    </div>
+                </section>
+
+                <!-- Health Status Cards -->
+                <section class="health-status-cards">
+                    <div class="card">
+                        <h4>Lungs</h4>
+                        <p>Status: Issue</p>
+                        <p>Date: 10/15/2021</p>
+                    </div>
+                    <div class="card">
+                        <h4>Teeth</h4>
+                        <p>Status: Healthy</p>
+                        <p>Date: 10/10/2021</p>
+                    </div>
+                    <div class="card">
+                        <h4>Bone</h4>
+                        <p>Status: Healthy</p>
+                        <p>Date: 10/12/2021</p>
+                    </div>
+                </section>
+
+                <!-- Calendar View -->
+                <section class="calendar-view">
+                    <h3>October 2021</h3>
+                    <div class="calendar-grid">
+                        <div class="day-header">Sun</div>
+                        <div class="day-header">Mon</div>
+                        <div class="day-header">Tue</div>
+                        <div class="day-header">Wed</div>
+                        <div class="day-header">Thu</div>
+                        <div class="day-header">Fri</div>
+                        <div class="day-header">Sat</div>
+                        <!-- Calendar Days (Static) -->
+                        <div class="day empty"></div>
+                        <div class="day empty"></div>
+                        <div class="day empty"></div>
+                        <div class="day">1</div>
+                        <div class="day">2</div>
+                        <div class="day">3</div>
+                        <div class="day">4</div>
+                        <div class="day">5</div>
+                        <div class="day">6</div>
+                        <div class="day">7</div>
+                        <div class="day">8</div>
+                        <div class="day">9</div>
+                        <div class="day">10</div>
+                        <div class="day">11</div>
+                        <div class="day">12</div>
+                        <div class="day">13</div>
+                        <div class="day">14</div>
+                        <div class="day appointment">15<div class="time">09:00</div></div>
+                        <div class="day">16</div>
+                        <div class="day">17</div>
+                        <div class="day appointment">18<div class="time">11:00</div></div>
+                        <div class="day">19</div>
+                        <div class="day">20</div>
+                        <div class="day">21</div>
+                        <div class="day appointment">22<div class="time">13:00</div></div>
+                        <div class="day">23</div>
+                        <div class="day">24</div>
+                        <div class="day">25</div>
+                        <div class="day">26</div>
+                        <div class="day appointment">27<div class="time">15:00</div></div>
+                        <div class="day">28</div>
+                        <div class="day">29</div>
+                        <div class="day">30</div>
+                        <div class="day">31</div>
+                    </div>
+                    <div class="appointment-details">
+                        <div class="appointment-card">
+                            <h4>Dentist</h4>
+                            <p>Time: 09:00</p>
+                            <p>Name: Dr. Smith</p>
+                        </div>
+                        <div class="appointment-card">
+                            <h4>Physiotherapy</h4>
+                            <p>Time: 11:00</p>
+                            <p>Name: Dr. Jones</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Upcoming Schedule -->
+                <section class="upcoming-schedule">
+                    <h3>The Upcoming Schedule</h3>
+                    <div class="schedule-group">
+                        <h4>On Thursday</h4>
+                        <div class="simple-appointment-card">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h5>Health checkup complete</h5>
+                                <p>09:00</p>
+                            </div>
+                        </div>
+                        <div class="simple-appointment-card">
+                            <i class="fas fa-eye"></i>
+                            <div>
+                                <h5>Ophthalmologist</h5>
+                                <p>11:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule-group">
+                        <h4>On Saturday</h4>
+                        <div class="simple-appointment-card">
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <h5>Cardiologist</h5>
+                                <p>13:00</p>
+                            </div>
+                        </div>
+                        <div class="simple-appointment-card">
+                            <i class="fas fa-brain"></i>
+                            <div>
+                                <h5>Neurologist</h5>
+                                <p>15:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Activity Feed -->
+                <section class="activity-feed">
+                    <h3>Activity</h3>
+                    <p>3 appointments on this week</p>
+                    <div class="bar-chart">
+                        <div class="bar" style="height: 50px;"></div>
+                        <div class="bar" style="height: 80px;"></div>
+                        <div class="bar" style="height: 30px;"></div>
+                        <div class="bar" style="height: 60px;"></div>
+                        <div class="bar" style="height: 40px;"></div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
